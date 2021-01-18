@@ -6,7 +6,7 @@ def chama_segunda_tela():
     primeira_tela.label_4.setText("")
     nome_usuario = primeira_tela.lineEdit.text()
     senha = primeira_tela.lineEdit_2.text()
-    if nome_usuario == "joao123" and senha == "123456" :
+    if nome_usuario == "diogo" and senha == "123456" :
         primeira_tela.close()
         segunda_tela.show()
     else :
@@ -48,9 +48,9 @@ def cadastrar():
 
 
 app=QtWidgets.QApplication([])
-primeira_tela=uic.loadUi("primeira_tela.ui")
-segunda_tela = uic.loadUi("segunda_tela.ui")
-tela_cadastro = uic.loadUi("tela_cadastro.ui")
+primeira_tela=uic.loadUi("tela_login/primeira_tela.ui")
+segunda_tela = uic.loadUi("tela_login/segunda_tela.ui")
+tela_cadastro = uic.loadUi("tela_login/tela_cadastro.ui")
 primeira_tela.pushButton.clicked.connect(chama_segunda_tela)
 segunda_tela.pushButton.clicked.connect(logout)
 primeira_tela.lineEdit_2.setEchoMode(QtWidgets.QLineEdit.Password)
